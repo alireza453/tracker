@@ -1,0 +1,9 @@
+{
+  "editor.fontFamily": "'JetBrains Mono Regular','estedad regular',Consolas, 'Courier New', monospace",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
