@@ -20,6 +20,7 @@
     "vue3-openlayers": "^4.0.2"
   },
   "devDependencies": {
+    "@nuxtjs/supabase": "^1.1.6",
     "daisyui": "^4.6.2"
   }
 }

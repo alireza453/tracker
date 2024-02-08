@@ -119,7 +119,7 @@ const DetailsOption: detailsTabOptionDto = {
 </script>
 
 <template>
-  <div class="grid grid-cols-12 mt-2">
+  <div class="grid grid-cols-12 ">
     <!-- trackers panel -->
     <div class="col-span-2 h-screen overflow-y-scroll dark:bg-gray-900 ">
       <UInput
@@ -145,12 +145,12 @@ const DetailsOption: detailsTabOptionDto = {
     </div>
 
     <!-- map area -->
-    <div class="col-span-7 bg-blue-50 flex items-center justify-center">
+    <div class="col-span-8 bg-blue-50 flex items-center justify-center">
       <CustomOlMap></CustomOlMap>
     </div>
     <!-- details panel -->
     <div
-      class="col-span-3 h-screen overflow-y-scroll dark:bg-gray-900 p-2 "
+      class="col-span-2 h-screen overflow-y-scroll dark:bg-gray-900 p-2 "
     >
       <h1 class="font-bold text-slate-800 dark:text-base-100 p-2 text-right">
         AU-NT

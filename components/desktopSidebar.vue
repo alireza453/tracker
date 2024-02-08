@@ -41,7 +41,7 @@ const sidebar_items = [
 <template>
   <!-- Static sidebar for desktop -->
   <div
-    class="fixed inset-y-0 left-0 border-r-2 dark:boreder-2 dark:border-gray-800 w-20 overflow-y-auto dark:bg-gray-900 bg-base-100 pb-4"
+    class="fixed z-10 inset-y-0 left-0 border-r-2 dark:boreder-2 dark:border-gray-800 w-16 overflow-y-auto dark:bg-gray-900 bg-base-100 pb-4"
   >
     <div class="flex h-16 shrink-0 items-center justify-center">
       <span class="text-indigo-500 w-10 h-10">
@@ -55,15 +55,24 @@ const sidebar_items = [
     </div>
     <nav class="mt-2">
       <ul role="list" class="flex flex-col items-center space-y-1">
-        <li v-for="item in sidebar_items" :key="item.id" class="w-full">
-          <nuxt-link
-            :to="item.link"
-            class="dark:hover:bg-gray-800 hover:bg-indigo-50 text-gray-400 dark:hover:text-white hover:text-indigo-500 group flex flex-col items-center justify-center rounded-md p-3 text-sm gap-y-2"
-          >
-            <UIcon :name="item.icon" class="w-6 h-6"></UIcon>
-            <span class="text-center">{{ item.title }}</span>
-          </nuxt-link>
-        </li>
+        <UTooltip
+          v-for="item in sidebar_items"
+          :key="item.id"
+          :popper="{ placement: 'right' }"
+        >
+          <template #text>
+            <span class="text-sm font-semibold text-center">{{ item.title }}</span>
+          </template>
+          <li class="w-full">
+            <nuxt-link
+              :to="item.link"
+              class="dark:hover:bg-gray-800 hover:bg-indigo-50 text-gray-400 dark:hover:text-white hover:text-indigo-500 group flex flex-col items-center justify-center rounded-md p-3 text-sm gap-y-2"
+            >
+              <UIcon :name="item.icon" class="w-6 h-6"></UIcon>
+              <!-- <span class="text-center">{{ item.title }}</span> -->
+            </nuxt-link>
+          </li>
+        </UTooltip>
       </ul>
     </nav>
   </div>
